@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Engagement Invitation | साखरपुडा निमंत्रण</title>
+  <meta name="description" content="You are warmly invited to our engagement ceremony.">
+  <meta name="theme-color" content="#7a1424">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500;700&family=Poppins:wght@400;500&family=Tiro+Devanagari+Marathi&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="locked">
+  <!-- Thin gold scroll-progress bar -->
+  <div id="progress" aria-hidden="true"></div>
+
+  <!-- Curtain-reveal cover: tap to open -->
+  <div id="cover">
+    <div class="curtain l"></div><div class="curtain r"></div>
+    <button id="openBtn" aria-label="Open the invitation">
+      <span class="om" aria-hidden="true">ॐ</span>
+      <span class="mr">सहर्ष निमंत्रण</span>
+      <small>Tap to open</small>
+    </button>
+  </div>
+
+  <!-- Background music (does NOT autoplay). Audio path is set in CONFIG.music -->
+  <button id="music" aria-label="Play background music" aria-pressed="false">♪</button>
+
+  <main>
+    <!-- 1. HERO -->
+    <header class="hero" id="top">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <canvas id="petals" aria-hidden="true"></canvas>
+      <div class="toran" id="toran" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <!-- Replace this ॐ with a Ganesha image: <img src="assets/ganesha.png" alt="Lord Ganesha"> -->
+        <div class="ganesha rv zoom" aria-hidden="true">ॐ</div>
+        <p class="marathi big rv up" data-bind="text.ganesh"></p>
+        <h1 class="names rv up">
+          <span data-bind="couple.bride"></span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span data-bind="couple.groom"></span>
+        </h1>
+        <p class="sub rv up">We are getting engaged</p>
+        <p class="marathi rv up" data-bind="text.engaged"></p>
+        <div class="diya" aria-hidden="true"><i></i></div>
+      </div>
+      <a href="#blessings" class="scroll" aria-label="Scroll down"><span></span>Scroll down</a>
+    </header>
+    <div class="paithani" aria-hidden="true"></div>
+
+    <!-- 2. BLESSINGS -->
+    <section id="blessings" class="sec">
+      <svg class="kalash rv zoom" viewBox="0 0 60 80" aria-hidden="true"><ellipse cx="30" cy="12" rx="12" ry="10" fill="#8b5a2b"/><path d="M30 2c-6 4-6 10 0 14 6-4 6-10 0-14z" fill="#1f5d3a"/><path d="M14 26h32l6 10c4 14-2 38-22 40C10 74 4 50 8 36z" fill="#c9a24b"/><path d="M12 36h36" stroke="#7a1424" stroke-width="3"/></svg>
+      <h2 class="marathi rv up" data-bind="text.invite"></h2>
+      <p class="rv up" data-bind="text.blessingEn"></p>
+      <div class="parents">
+        <div class="rv left"><h3 data-bind="families.brideSide"></h3><p data-bind="families.brideParents"></p></div>
+        <div class="rv right"><h3 data-bind="families.groomSide"></h3><p data-bind="families.groomParents"></p></div>
+      </div>
+    </section>
+
+    <!-- 3. MEET THE COUPLE -->
+    <section class="sec alt">
+      <h2 class="title rv up">Meet the Couple</h2>
+      <div class="couple" id="couple"></div>
+    </section>
+
+    <!-- 4. OUR STORY -->
+    <section class="sec">
+      <h2 class="title rv up">Our Story</h2>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- 5. EVENT DETAILS -->
+    <section class="sec alt">
+      <h2 class="title rv up">The Celebration</h2>
+      <div class="cards" id="cards" data-stagger></div>
+    </section>
+
+    <!-- 6. COUNTDOWN -->
+    <section class="sec count">
+      <h2 class="title rv up">Counting Down</h2>
+      <div class="timer rv zoom" id="timer" role="timer" aria-live="off">
+        <div><b id="d">00</b><span>Days</span></div>
+        <div><b id="h">00</b><span>Hours</span></div>
+        <div><b id="m">00</b><span>Minutes</span></div>
+        <div><b id="s">00</b><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- 7. GALLERY -->
+    <section class="sec">
+      <h2 class="title rv up">Gallery</h2>
+      <div class="gallery" id="gallery" data-stagger></div>
+    </section>
+
+    <!-- 8. VENUE & MAP -->
+    <section class="sec alt">
+      <h2 class="title rv up">Venue</h2>
+      <p class="rv up"><strong data-bind="event.venue"></strong><br><span data-bind="event.address"></span></p>
+      <a class="btn rv up" id="mapBtn" target="_blank" rel="noopener">Open in Google Maps</a>
+      <div class="map rv zoom"><iframe id="mapFrame" title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>
+
+    <!-- 9. RSVP -->
+    <section class="sec">
+      <h2 class="title rv up">RSVP</h2>
+      <p class="rv up">Kindly let us know you are joining us.</p>
+      <div class="btns rv up">
+        <a class="btn wa" id="waBtn" target="_blank" rel="noopener">Confirm on WhatsApp</a>
+        <a class="btn ghost" id="callBtn">Call</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. FOOTER -->
+  <div class="paithani" aria-hidden="true"></div>
+  <footer>
+    <p class="marathi rv up" data-bind="text.footerBlessing"></p>
+    <p class="rv up">With best compliments from</p>
+    <h3 class="rv up" data-bind="families.compliments"></h3>
+    <p class="rv up">Thank you for being a part of our happiness.</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <dialog id="lb" aria-label="Photo viewer"><button id="lbClose" aria-label="Close photo">&times;</button><img id="lbImg" alt=""></dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
