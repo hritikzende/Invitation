@@ -4,10 +4,9 @@ import { motion, AnimatePresence } from "motion/react";
 interface TimeUnit {
   value: number;
   label: string;
-  labelAr: string;
 }
 
-function FlipDigit({ value, label, labelAr }: TimeUnit) {
+function FlipDigit({ value, label }: TimeUnit) {
   return (
     <div className="flex flex-col items-center">
       <div className="relative">
@@ -36,9 +35,6 @@ function FlipDigit({ value, label, labelAr }: TimeUnit) {
       <span className="text-[8px] sm:text-[10px] uppercase tracking-[0.2em] sm:tracking-[0.25em] font-sans font-bold text-brand-secondary mt-2 sm:mt-3">
         {label}
       </span>
-      <span className="text-[9px] sm:text-[10px] font-arabic text-brand-accent font-bold mt-0.5">
-        {labelAr}
-      </span>
     </div>
   );
 }
@@ -61,7 +57,7 @@ function Separator() {
 }
 
 export default function Countdown() {
-  const targetDate = new Date("2026-09-25T19:00:00").getTime();
+  const targetDate = new Date("2026-10-26T19:00:00").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -95,10 +91,10 @@ export default function Countdown() {
   }, [targetDate]);
 
   const units: TimeUnit[] = [
-    { value: timeLeft.days, label: "Days", labelAr: "يوم" },
-    { value: timeLeft.hours, label: "Hours", labelAr: "ساعة" },
-    { value: timeLeft.minutes, label: "Minutes", labelAr: "دقيقة" },
-    { value: timeLeft.seconds, label: "Seconds", labelAr: "ثانية" },
+    { value: timeLeft.days, label: "Days" },
+    { value: timeLeft.hours, label: "Hours" },
+    { value: timeLeft.minutes, label: "Minutes" },
+    { value: timeLeft.seconds, label: "Seconds" },
   ];
 
   return (

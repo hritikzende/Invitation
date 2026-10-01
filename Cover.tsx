@@ -67,18 +67,18 @@ export default function Cover({ onOpen }: CoverProps) {
             variants={itemVariants}
             className="font-arabic text-base sm:text-xl text-brand-primary mb-4 sm:mb-6 font-extrabold tracking-[0.2em] uppercase"
           >
-            دعوة خطوبة
+            Engagement Invitation
           </motion.h2>
           
           {/* Main Names */}
           <motion.div variants={itemVariants} className="relative z-10 w-full py-2">
             <Sparkles count={15} />
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[1.08] text-brand-primary relative z-10 tracking-tight">
-              Rashad
+              Hritik
               <span className="text-3xl sm:text-5xl font-serif italic font-normal text-brand-accent block my-2 sm:my-3">
                 &
               </span>
-              Esraa
+              Arati
             </h1>
           </motion.div>
 
@@ -89,7 +89,7 @@ export default function Cover({ onOpen }: CoverProps) {
             style={{ direction: "ltr", unicodeBidi: "isolate" }}
             className="font-sans text-[11px] sm:text-xs text-brand-secondary font-bold tracking-[0.3em] uppercase mt-6 sm:mt-10 mb-8 sm:mb-10 px-4 py-1.5 rounded-full bg-white/50 backdrop-blur-xs border border-brand-border/40"
           >
-            25 September 2026
+            26 October 2026
           </motion.p>
           
           {/* Call to action button */}
@@ -100,7 +100,7 @@ export default function Cover({ onOpen }: CoverProps) {
             onClick={onOpen}
             className="px-8 sm:px-12 py-3.5 sm:py-4 bg-brand-primary text-brand-bg text-[11px] sm:text-xs uppercase tracking-[0.3em] font-sans font-bold hover:bg-brand-accent transition-all duration-300 z-20 rounded-full shadow-lg hover:shadow-xl cursor-pointer border-none outline-none"
           >
-            افتح الدعوة
+            Open the invitation
           </motion.button>
         </motion.div>
       </div>

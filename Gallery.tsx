@@ -18,18 +18,18 @@ const galleryPhotos: PhotoItem[] = [
   {
     id: "photo-1",
     src: photo1,
-    title: "بداية الحكاية",
+    title: "The Beginning of Our Story",
     titleEn: "Sweet Childhood",
-    caption: "ذكريات طفولة بريئة كانت أول سطور في أجمل قصة حب",
-    tag: "Then • طفولتنا",
+    caption: "Childhood memories were the first lines of our most beautiful love story.",
+    tag: "Then • Our childhood",
   },
   {
     id: "photo-2",
     src: photo2,
-    title: "فرحتنا اليوم",
+    title: "Our Joy Today",
     titleEn: "Engagement Day",
-    caption: "واليوم بنبدأ مع بعض خطوتنا الأولى نحو المستقبل والأبد",
-    tag: "Now • خطوبتنا",
+    caption: "And today, we begin taking our first steps toward the future and forever.",
+    tag: "Now • Our engagement",
   },
 ];
 
@@ -105,11 +105,11 @@ export default function Gallery() {
         </h2>
 
         <h3 className="font-arabic text-2xl sm:text-4xl font-bold text-brand-accent mt-1 mb-2">
-          ذكرياتنا الجميلة
+          Our Beautiful Memories
         </h3>
 
         <p className="font-arabic text-brand-secondary text-xs sm:text-base max-w-md mx-auto font-medium">
-          "من طفولة بريئة ملؤها المحبة.. إلى موعد جمعنا على طريق العمر"
+          "From innocent childhood filled with love... to the day we meet on the path of life"
         </p>
 
         <div className="w-16 h-[1px] bg-brand-border/60 mt-4 mb-2"></div>
@@ -176,7 +176,7 @@ export default function Gallery() {
                   <Maximize2 size={18} strokeWidth={1.8} />
                 </div>
                 <span className="text-[10px] sm:text-[11px] font-sans font-semibold tracking-wider text-white uppercase bg-black/50 px-3 py-1 rounded-full backdrop-blur-xs">
-                  اضغط للتكبير
+                  Click to zoom
                 </span>
               </div>
             </div>

@@ -1,10 +1,10 @@
 <div align="center">
 
-# 💍 Rashad & Esraa — Digital Engagement Invitation
+# 💍 Hritik & Arati — Digital Engagement Invitation
 
 **A love story, beautifully told in code.**
 
-An elegant, animated digital engagement invitation crafted with care — featuring immersive music, a live countdown, interactive RSVP, photo gallery, and a whole lot of heart.
+An elegant, animated digital engagement invitation crafted with care — featuring immersive music, a live countdown, a photo gallery, and a whole lot of heart.
 
 [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-Visit_Now-c9a87c?style=for-the-badge)](https://Bavly-Hamdy.github.io/Engagement)
 [![Built With](https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
@@ -25,7 +25,7 @@ An elegant, animated digital engagement invitation crafted with care — featuri
 
 This isn't just another web app — it's a **digital celebration of love**.
 
-When Rashad and Esraa got engaged, they wanted something more personal than a paper card and more memorable than a WhatsApp message. So this invitation was born: a fully immersive, animated experience that guests can open on their phones and feel the warmth of the moment, no matter where they are.
+When Hritik and Arati got engaged, they wanted something more personal than a paper card and more memorable than a WhatsApp message. So this invitation was born: a fully immersive, animated experience that guests can open on their phones and feel the warmth of the moment, no matter where they are.
 
 Every animation, every color choice, every line of Arabic calligraphy was placed with intention. The background music (*الليل وسماه*) plays softly as you scroll — because love deserves a soundtrack. 🎶
 
@@ -36,12 +36,10 @@ Every animation, every color choice, every line of Arabic calligraphy was placed
 | Feature | Description |
 |---|---|
 | 🎬 **Animated Cover** | A cinematic entrance with sparkle effects, staggered reveals, and a "Open the Invitation" button that sets the mood |
-| ⏳ **Live Countdown** | Real-time countdown to the big day — September 25th, 2026 |
+| ⏳ **Live Countdown** | Real-time countdown to the big day — Monday, October 26th, 2026 |
 | 📅 **Interactive Calendar** | Visual calendar highlighting the engagement date |
 | 📸 **Photo Gallery** | A curated collection of the couple's moments together |
 | 📍 **Venue & Map** | Google Maps integration — Star Club, Shubra El Kheima |
-| ✅ **RSVP System** | Interactive modal for guests to confirm attendance |
-| 💬 **Private Guestbook** | Confidential wishes submission with a private 3D page-turning interactive book viewer for the couple (`#/guestbook-private`) |
 | 🎵 **Background Music** | Ambient audio player with play/pause toggle |
 | ✍️ **Bilingual UI** | Seamless Arabic + English typography throughout |
 
@@ -77,17 +75,12 @@ Engagement-main/
 │   │   ├── Countdown.tsx      # ⏳ Live countdown timer
 │   │   ├── Cover.tsx          # 🎬 Cinematic entrance screen
 │   │   ├── Gallery.tsx        # 📸 Photo gallery with lightbox
-│   │   ├── Guestbook.tsx      # 💬 Guest wishes submission form
 │   │   ├── InteractiveCalendar.tsx  # 📅 Calendar widget
 │   │   ├── Invitation.tsx     # 📜 Main invitation layout
-│   │   ├── PrivateGuestbook.tsx # 📖 3D book viewer for couple
-│   │   ├── RSVPModal.tsx      # ✅ RSVP confirmation modal
 │   │   └── Sparkles.tsx       # ✨ Decorative sparkle effects
-│   ├── utils/
-│   │   └── guestbookStorage.ts # 💾 LocalStorage & date formatting
 │   ├── App.tsx                # Root component & audio logic
-│   ├── main.tsx               # Client router & DOM entry point
-│   └── index.css              # Global styles & 3D book design tokens
+│   ├── main.tsx               # App entry point
+│   └── index.css              # Global styles & design tokens
 ├── index.html                 # HTML shell
 ├── vite.config.ts             # Vite + Tailwind + React config
 ├── tsconfig.json              # TypeScript configuration
@@ -114,11 +107,7 @@ cd Engagement
 # 2. Install dependencies
 npm install
 
-# 3. (Optional) Set up environment variables
-cp .env.example .env.local
-# Edit .env.local and add your GEMINI_API_KEY if needed
-
-# 4. Start the development server
+# 3. Start the development server
 npm run dev
 ```
 
@@ -182,7 +171,7 @@ This is a personal project, but if you'd like to use it as a template for your o
 5. Update the venue, date, and map coordinates in `Invitation.tsx`
 6. Deploy to your own GitHub Pages
 
-> 💡 **Tip**: Search for "Rashad" and "Esraa" across the codebase to find all places that need personalization.
+> 💡 **Tip**: Search for "Hritik" and "Arati" across the codebase to find all places that need personalization.
 
 ---
 
@@ -196,7 +185,7 @@ This project is open source and available for personal use. If you use it, a sma
 
 ### 💛 Made with love, late nights, and lots of coffee
 
-**Rashad & Esraa — 25.09.2026**
+**Hritik & Arati — 25.09.2026**
 
 *عقبال عندكم جميعاً* 🤍
 

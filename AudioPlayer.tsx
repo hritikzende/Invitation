@@ -132,10 +132,10 @@ export default function AudioPlayer({ isPlaying, onToggle, audioRef }: AudioPlay
             <EqualizerBars isPlaying={isPlaying} />
             <div className="min-w-0 flex-1">
               <div className="text-[8px] uppercase tracking-[0.2em] font-sans font-bold text-brand-secondary">
-                {isPlaying ? "شغالة الآن" : "موسيقى الدعوة"}
+                {isPlaying ? "Now playing" : "Invitation music"}
               </div>
               <div className="text-xs font-arabic text-brand-primary font-bold truncate">
-                الليل وسماه
+                The Night and Its Name
               </div>
             </div>
           </div>

@@ -2,13 +2,12 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import { Heart, CalendarPlus, ChevronLeft, ChevronRight, Check } from "lucide-react";
 
-const MONTH_NAMES_AR = [
-  "يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو",
-  "يوليو", "أغسطس", "سبتمبر", "أكتوبر", "نوفمبر", "ديسمبر",
+const MONTH_NAMES = [
+  "January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December",
 ];
 
 const DAY_NAMES = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const DAY_NAMES_AR = ["أحد", "إثنين", "ثلاثاء", "أربعاء", "خميس", "جمعة", "سبت"];
 
 function getDaysInMonth(year: number, month: number): number {
   return new Date(year, month + 1, 0).getDate();
@@ -22,20 +21,20 @@ function generateICSFile(): void {
   const icsContent = [
     "BEGIN:VCALENDAR",
     "VERSION:2.0",
-    "PRODID:-//Rashad & Esraa//Engagement//EN",
+    "PRODID:-//Hritik & Arati//Engagement//EN",
     "CALSCALE:GREGORIAN",
     "METHOD:PUBLISH",
     "BEGIN:VEVENT",
-    "DTSTART:20260925T190000",
-    "DTEND:20260926T010000",
-    "SUMMARY:💍 خطوبة رشاد وإسراء",
-    "DESCRIPTION:حفل خطوبة رشاد وإسراء - نادى ستار كلوب، شبرا الخيمة",
-    "LOCATION:نادى ستار كلوب، شبرا الخيمة",
+    "DTSTART:20261026T190000",
+    "DTEND:20261027T010000",
+    "SUMMARY:💍 Hritik & Arati Engagement",
+    "DESCRIPTION:Engagement celebration for Hritik & Arati - Star Club, Shubra El-Kheima",
+    "LOCATION:Star Club, Shubra El-Kheima",
     "STATUS:CONFIRMED",
     "BEGIN:VALARM",
     "TRIGGER:-P1D",
     "ACTION:DISPLAY",
-    "DESCRIPTION:غداً حفل خطوبة رشاد وإسراء 💍",
+    "DESCRIPTION:Tomorrow is the Hritik & Arati engagement celebration 💍",
     "END:VALARM",
     "END:VEVENT",
     "END:VCALENDAR",
@@ -45,7 +44,7 @@ function generateICSFile(): void {
   const url = URL.createObjectURL(blob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "rashad-esraa-engagement.ics";
+  link.download = "hritik-arati-engagement.ics";
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -53,7 +52,7 @@ function generateICSFile(): void {
 }
 
 export default function InteractiveCalendar() {
-  const [currentMonth, setCurrentMonth] = useState(8); // September (0-indexed)
+  const [currentMonth, setCurrentMonth] = useState(9); // October (0-indexed)
   const [currentYear, setCurrentYear] = useState(2026);
   const [saved, setSaved] = useState(false);
 
@@ -76,7 +75,7 @@ export default function InteractiveCalendar() {
   };
 
   const isEngagementDay = (day: number) =>
-    currentYear === 2026 && currentMonth === 8 && day === 25;
+    currentYear === 2026 && currentMonth === 9 && day === 26;
 
   const isPast = (day: number) => {
     const date = new Date(currentYear, currentMonth, day);
@@ -111,7 +110,7 @@ export default function InteractiveCalendar() {
         CALENDAR
       </h2>
       <h3 className="font-arabic text-2xl sm:text-3xl font-bold text-brand-accent mb-6 sm:mb-8">
-        احفظ الموعد
+        Save the date
       </h3>
 
       {/* Calendar Card */}
@@ -133,7 +132,7 @@ export default function InteractiveCalendar() {
               {new Date(currentYear, currentMonth).toLocaleDateString("en-US", { month: "long" })} {currentYear}
             </div>
             <div className="font-arabic text-xs sm:text-sm text-brand-accent font-bold mt-0.5">
-              {MONTH_NAMES_AR[currentMonth]} {currentYear}
+              {MONTH_NAMES[currentMonth]} {currentYear}
             </div>
           </div>
 
@@ -150,13 +149,10 @@ export default function InteractiveCalendar() {
 
         {/* Day Headers */}
         <div className="grid grid-cols-7 gap-1 mb-2">
-          {DAY_NAMES.map((day, i) => (
+          {DAY_NAMES.map((day) => (
             <div key={day} className="text-center py-0.5 sm:py-1">
               <div className="text-[8px] sm:text-[9px] font-sans font-bold uppercase tracking-wider text-brand-secondary">
                 {day}
-              </div>
-              <div className="text-[8px] sm:text-[9px] font-arabic text-brand-accent/80 font-bold">
-                {DAY_NAMES_AR[i]}
               </div>
             </div>
           ))}
@@ -199,11 +195,11 @@ export default function InteractiveCalendar() {
         <div className="flex items-center justify-center gap-4 sm:gap-6 mt-4 pt-3 border-t border-brand-border/40">
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded-xs bg-brand-accent shadow-xs" />
-            <span className="text-[10px] font-arabic font-medium text-brand-secondary">يوم الخطوبة</span>
+            <span className="text-[10px] font-arabic font-medium text-brand-secondary">Engagement Day</span>
           </div>
           <div className="flex items-center gap-1.5">
             <div className="w-3 h-3 rounded-xs border border-brand-primary/30 bg-brand-primary/10" />
-            <span className="text-[10px] font-arabic font-medium text-brand-secondary">اليوم الحالي</span>
+            <span className="text-[10px] font-arabic font-medium text-brand-secondary">Today</span>
           </div>
         </div>
       </div>
@@ -220,7 +216,7 @@ export default function InteractiveCalendar() {
         }`}
       >
         {saved ? <Check size={16} /> : <CalendarPlus size={16} strokeWidth={1.8} />}
-        {saved ? "تم الحفظ بنجاح" : "حفظ في التقويم"}
+        {saved ? "Saved successfully" : "Save to calendar"}
       </motion.button>
     </motion.section>
   );
