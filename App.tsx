@@ -4,7 +4,7 @@ import Cover from "./Cover";
 import Invitation from "./Invitation";
 import AudioPlayer from "./AudioPlayer";
 import ringsBg from "./rings.png";
-import musicTrack from "./el-leil-we-samah.mpeg";
+import musicTrack from "./song.mp3";
 
 export default function App() {
   const [isOpened, setIsOpened] = useState(false);

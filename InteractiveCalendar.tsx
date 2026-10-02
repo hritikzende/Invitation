@@ -109,7 +109,7 @@ export default function InteractiveCalendar() {
       <h2 className="font-serif tracking-[0.25em] text-xs sm:text-sm uppercase font-bold text-brand-primary mb-1">
         CALENDAR
       </h2>
-      <h3 className="font-arabic text-2xl sm:text-3xl font-bold text-brand-accent mb-6 sm:mb-8">
+      <h3 className="font-arabic text-3xl sm:text-4xl font-bold text-brand-accent mb-6 sm:mb-8">
         Save the date
       </h3>
 
@@ -179,9 +179,10 @@ export default function InteractiveCalendar() {
                     <motion.div
                       animate={{ scale: [1, 1.25, 1] }}
                       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                      className="absolute -top-1 -right-1 z-10"
+                      className="absolute -top-1.5 -right-1.5 sm:-top-2 sm:-right-2 z-10"
                     >
-                      <Heart size={12} className="fill-red-500 text-red-500" />
+                      <Heart size={18} className="fill-red-500 text-red-500 sm:hidden" />
+                      <Heart size={22} className="hidden fill-red-500 text-red-500 sm:block" />
                     </motion.div>
                   )}
                   <span className="relative z-10">{day}</span>

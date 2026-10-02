@@ -2,7 +2,6 @@ import { motion } from "motion/react";
 import { MapPin, Navigation } from "lucide-react";
 import Countdown from "./Countdown";
 import Sparkles from "./Sparkles";
-import Gallery from "./Gallery";
 import InteractiveCalendar from "./InteractiveCalendar";
 
 export default function Invitation() {
@@ -50,17 +49,15 @@ export default function Invitation() {
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-xs border border-brand-border/40 text-brand-accent text-xs font-bold tracking-widest uppercase">
             || श्री गणेशाय नमः ||
           </div>
-          <p className="font-arabic text-4xl sm:text-2xl md:text-4xl text-brand-primary leading-relaxed sm:leading-loose font-bold">
+          <p className="font-arabic text-3xl sm:text-4xl md:text-5xl text-brand-primary leading-relaxed sm:leading-loose font-bold">
             “Zende & Wable Families”
           </p>
-          <p className="font-arabic text-sm sm:text-base text-brand-secondary mt-5 tracking-[0.15em] font-bold">
-            — Two Hearts. Two Families. One Beginning. — <br></br>
-<br></br>
-A journey that started with two people
-is now bringing two families together.
-
-Join us for an evening filled with
-love, laughter, blessings and celebration. 
+          <p className="font-poppins text-sm sm:text-base text-brand-secondary mt-5 tracking-[0.15em] font-normal">
+            — Two Hearts. Two Families. One Beginning. —
+          </p>
+          <p className="font-sans italic text-base sm:text-lg text-brand-primary mt-4 leading-relaxed">
+            A journey that started with two people
+is now bringing two families together. Join us for an evening filled with love, laughter, blessings and celebration.
           </p>
         </motion.div>
 
@@ -72,10 +69,6 @@ love, laughter, blessings and celebration.
           viewport={{ once: true, margin: "-60px" }}
           className="mb-16 sm:mb-24 relative w-full"
         >
-          <span className="absolute text-6xl sm:text-8xl md:text-[140px] lg:text-[180px] font-sans font-black text-brand-faint -z-10 opacity-70 uppercase tracking-tighter top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none select-none">
-            CELEBRATE
-          </span>
-
           <h2 className="font-arabic text-base sm:text-l text-brand-primary font-extrabold tracking-[0.2em] mb-8 sm:mb-12 uppercase" dir="rtl">
             WE cordially invite you to celebrate the joyous engagement of
           </h2>
@@ -85,8 +78,13 @@ love, laughter, blessings and celebration.
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-primary z-10 block relative tracking-tight">
               Hritik
             </h1>
-            <span className="text-3xl sm:text-5xl font-serif italic font-normal text-brand-accent block my-3 sm:my-6 relative z-10">
-              &amp;
+            <span className="relative inline-flex items-center justify-center my-3 sm:my-6">
+              <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl sm:text-7xl md:text-[140px] lg:text-[180px] font-sans font-black text-brand-faint opacity-50 uppercase tracking-tighter pointer-events-none select-none">
+                CELEBRATE
+              </span>
+              <span className="relative z-10 text-3xl sm:text-5xl font-serif italic font-normal text-brand-accent">
+                &amp;
+              </span>
             </span>
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-primary z-10 block relative tracking-tight">
               Arati
@@ -102,7 +100,7 @@ love, laughter, blessings and celebration.
           viewport={{ once: true, margin: "-60px" }}
           className="mb-16 sm:mb-24 w-full flex flex-col items-center"
         >
-          <div className="inline-block tracking-[0.3em] text-[11px] sm:text-xs uppercase font-sans font-extrabold text-brand-primary mb-3">
+          <div className="inline-block tracking-[0.3em] text-[11px] sm:text-s uppercase font-sans font-extrabold text-brand-primary mb-3">
             Save The Date
           </div>
 
@@ -113,9 +111,13 @@ love, laughter, blessings and celebration.
           <p 
             dir="ltr" 
             style={{ direction: "ltr", unicodeBidi: "isolate" }}
-            className="text-lg sm:text-2xl font-serif italic text-brand-accent font-semibold mb-8 sm:mb-12"
+            className="text-lg sm:text-2xl font-sans text-brand-accent font-Regular mb-4 sm:mb-6"
           >
-            Monday, October 26, 2026
+            11:00 AM Onwards, Manali Resort
+          </p>
+<br></br>
+          <p className="font-serif italic text-3xl sm:text-4xl text-brand-primary mb-3 sm:mb-4">
+           - Countdown -
           </p>
           
           <Countdown />
@@ -123,9 +125,6 @@ love, laughter, blessings and celebration.
 
         {/* Interactive Calendar */}
         <InteractiveCalendar />
-
-        {/* Photo Gallery Section */}
-        <Gallery />
 
         {/* Location Section */}
         <motion.div
@@ -142,14 +141,14 @@ love, laughter, blessings and celebration.
              </div>
              <div className="text-right" dir="ltr">
                 <div className="text-[10px] uppercase tracking-widest font-sans font-extrabold text-brand-secondary">The Venue</div>
-                <div className="text-sm font-sans font-bold text-brand-primary mt-0.5">Star Club, Shubra El-Kheima</div>
+                <div className="text-sm font-sans font-bold text-brand-primary mt-0.5">Manali Resort, Pune</div>
              </div>
           </div>
 
           <p className="font-arabic text-lg sm:text-2xl text-brand-primary font-medium mb-8 leading-relaxed max-w-lg px-4">
             With all our love, we are waiting for you to join us in our joy on Monday, October 26, 2026,
             <br />
-            at Star Club, Corniche El Nile, Shubra El-Kheima.
+            at Manali Resort, Loni Kalbhor, Pune
           </p>
 
           {/* Map */}
@@ -157,7 +156,7 @@ love, laughter, blessings and celebration.
             <div className="absolute inset-0 border-[6px] sm:border-[10px] border-brand-bg/30 z-10 pointer-events-none rounded-2xl"></div>
             <iframe 
               title="Event location on the map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.5!2d31.2475!3d30.1285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z469Q%2BVRV!5e0!3m2!1sen!2seg!4v1700000000000!5m2!1sen!2seg" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.792253104591!2d73.99606607465155!3d18.493067070014938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c034df12b7d1%3A0x8242bde1383b3363!2sManali%20Resort!5e0!3m2!1sen!2sin!4v1790956503420!5m2!1sen!2sin" 
               width="100%" 
               height="100%" 
               style={{ border: 0 }} 

@@ -135,7 +135,7 @@ export default function AudioPlayer({ isPlaying, onToggle, audioRef }: AudioPlay
                 {isPlaying ? "Now playing" : "Invitation music"}
               </div>
               <div className="text-xs font-arabic text-brand-primary font-bold truncate">
-                The Night and Its Name
+                Dhaaga Dhaaga
               </div>
             </div>
           </div>

@@ -57,7 +57,7 @@ function Separator() {
 }
 
 export default function Countdown() {
-  const targetDate = new Date("2026-10-26T19:00:00").getTime();
+  const targetDate = new Date("2026-10-26T11:00:00+05:30").getTime();
 
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
