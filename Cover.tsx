@@ -21,6 +21,11 @@ const itemVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const } },
 };
 
+const watermarkVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 0.4, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] as const } },
+};
+
 const cornerVariants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: { opacity: 0.95, scale: 1, transition: { duration: 1.2, ease: [0.16, 1, 0.3, 1] as const } },
@@ -54,14 +59,6 @@ export default function Cover({ onOpen }: CoverProps) {
           initial="hidden"
           animate="visible"
         >
-          {/* Watermark */}
-          <motion.span
-            variants={itemVariants}
-            className="absolute text-7xl sm:text-9xl md:text-[160px] font-sans font-black text-brand-faint -z-10 opacity-70 uppercase tracking-tighter pointer-events-none select-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none"
-          >
-            INVITE
-          </motion.span>
-
           {/* Subtitle */}
           <motion.h2
             variants={itemVariants}
@@ -73,12 +70,18 @@ export default function Cover({ onOpen }: CoverProps) {
           {/* Main Names */}
           <motion.div variants={itemVariants} className="relative z-10 w-full py-2">
             <Sparkles count={15} />
+            <motion.span
+              variants={watermarkVariants}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-4xl sm:text-5xl md:text-6xl font-sans font-black text-brand-faint uppercase tracking-tighter leading-none pointer-events-none select-none whitespace-nowrap z-0"
+            >
+              INVITE
+            </motion.span>
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-[1.08] text-brand-primary relative z-10 tracking-tight">
-              Hritik
+              Arati
               <span className="text-3xl sm:text-5xl font-serif italic font-normal text-brand-accent block my-2 sm:my-3">
                 &
               </span>
-              Arati
+              Hritik
             </h1>
           </motion.div>
 
@@ -98,7 +101,7 @@ export default function Cover({ onOpen }: CoverProps) {
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.96 }}
             onClick={onOpen}
-            className="px-8 sm:px-12 py-3.5 sm:py-4 bg-brand-primary text-brand-bg text-[11px] sm:text-xs uppercase tracking-[0.3em] font-sans font-bold hover:bg-brand-accent transition-all duration-300 z-20 rounded-full shadow-lg hover:shadow-xl cursor-pointer border-none outline-none"
+            className="motion-safe:animate-pulse px-8 sm:px-12 py-3.5 sm:py-4 bg-brand-primary text-brand-bg text-[11px] sm:text-xs uppercase tracking-[0.3em] font-sans font-bold hover:bg-brand-accent transition-all duration-300 z-20 rounded-full shadow-lg hover:shadow-xl cursor-pointer border-none outline-none"
           >
             Open the invitation
           </motion.button>

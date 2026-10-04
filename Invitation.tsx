@@ -49,15 +49,19 @@ export default function Invitation() {
           <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-white/60 backdrop-blur-xs border border-brand-border/40 text-brand-accent text-xs font-bold tracking-widest uppercase">
             || श्री गणेशाय नमः ||
           </div>
-          <p className="font-arabic text-3xl sm:text-4xl md:text-5xl text-brand-primary leading-relaxed sm:leading-loose font-bold">
-            “Zende & Wable Families”
+          <p className="font-raleway text-3xl sm:text-4xl md:text-5xl text-brand-primary leading-relaxed sm:leading-loose font-bold">
+            “Wable & Zende Families”
           </p>
           <p className="font-poppins text-sm sm:text-base text-brand-secondary mt-5 tracking-[0.15em] font-normal">
             — Two Hearts. Two Families. One Beginning. —
           </p>
           <p className="font-sans italic text-base sm:text-lg text-brand-primary mt-4 leading-relaxed">
-            A journey that started with two people
-is now bringing two families together. Join us for an evening filled with love, laughter, blessings and celebration.
+            Your presence will make our celebration
+even more special and memorable.
+
+Come share our happiness,
+bless our new beginning,
+and celebrate this beautiful moment with us.
           </p>
         </motion.div>
 
@@ -76,7 +80,7 @@ is now bringing two families together. Join us for an evening filled with love, 
           <div className="relative inline-block w-full max-w-lg mt-2 sm:mt-6">
             <Sparkles count={18} />
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-primary z-10 block relative tracking-tight">
-              Hritik
+              Arati
             </h1>
             <span className="relative inline-flex items-center justify-center my-3 sm:my-6">
               <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl sm:text-7xl md:text-[140px] lg:text-[180px] font-sans font-black text-brand-faint opacity-50 uppercase tracking-tighter pointer-events-none select-none">
@@ -87,7 +91,7 @@ is now bringing two families together. Join us for an evening filled with love, 
               </span>
             </span>
             <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold leading-none text-brand-primary z-10 block relative tracking-tight">
-              Arati
+              Hritik
             </h1>
           </div>
         </motion.div>
